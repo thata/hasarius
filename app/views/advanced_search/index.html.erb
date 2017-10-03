@@ -1,0 +1,25 @@
+<h1>AdvancedSearch#index</h1>
+
+<%= form_tag({action: "index"}, {method: "get"}) do %>
+  <div><%= text_field_tag("conditions[]", @conditions[0] || '') %></div>
+  <div><%= text_field_tag("conditions[]", @conditions[1] || '') %></div>
+  <div><%= text_field_tag("conditions[]", @conditions[2] || '') %></div>
+  <%= submit_tag(:submit) %>
+<% end %>
+
+<h2>Organisms</h2>
+<table>
+  <tr>
+    <th>Species</th>
+    <th>Tax ID</th>
+    <th>Type of web</th>
+  </tr>
+  <% @orgs.each do |org| %>
+    <tr>
+      <td><%= org.species %></td>
+      <td><%= org.tax_id %></td>
+      <td><%= org.type_of_web %></td>
+    </tr>
+  <% end %>
+</table>
+<p>Find me in app/views/advanced_search/index.html.erb</p>
