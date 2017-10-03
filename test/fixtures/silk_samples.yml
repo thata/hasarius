@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  indivisual: one
+  silk_type: MyString
+  paper: MyString
+  institution: MyString
+
+two:
+  indivisual: two
+  silk_type: MyString
+  paper: MyString
+  institution: MyString

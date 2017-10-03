@@ -1,0 +1,42 @@
+<%= form_with(model: gene, local: true) do |form| %>
+  <% if gene.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gene.errors.count, "error") %> prohibited this gene from being saved:</h2>
+
+      <ul>
+      <% gene.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :specimen_sample_id %>
+    <%= form.text_field :specimen_sample_id, id: :gene_specimen_sample_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gene_name %>
+    <%= form.text_field :gene_name, id: :gene_gene_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dna_sequence %>
+    <%= form.text_area :dna_sequence, id: :gene_dna_sequence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :protein_name %>
+    <%= form.text_field :protein_name, id: :gene_protein_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amino_acid_sequence %>
+    <%= form.text_area :amino_acid_sequence, id: :gene_amino_acid_sequence %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

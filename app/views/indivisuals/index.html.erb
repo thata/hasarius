@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Indivisuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Organism</th>
+      <th>Sex</th>
+      <th>Sampling date</th>
+      <th>Country</th>
+      <th>Size</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @indivisuals.each do |indivisual| %>
+      <tr>
+        <td><%= indivisual.organism %></td>
+        <td><%= indivisual.sex %></td>
+        <td><%= indivisual.sampling_date %></td>
+        <td><%= indivisual.country %></td>
+        <td><%= indivisual.size %></td>
+        <td><%= link_to 'Show', indivisual %></td>
+        <td><%= link_to 'Edit', edit_indivisual_path(indivisual) %></td>
+        <td><%= link_to 'Destroy', indivisual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Indivisual', new_indivisual_path %>

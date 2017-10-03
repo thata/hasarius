@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  silk_sample: one
+  toughness: 1.5
+  toughness_sd: 1.5
+
+two:
+  silk_sample: two
+  toughness: 1.5
+  toughness_sd: 1.5

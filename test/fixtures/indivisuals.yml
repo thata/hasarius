@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organism: one
+  sex: MyString
+  sampling_date: 2017-10-03
+  country: MyString
+  size: 1
+
+two:
+  organism: two
+  sex: MyString
+  sampling_date: 2017-10-03
+  country: MyString
+  size: 1

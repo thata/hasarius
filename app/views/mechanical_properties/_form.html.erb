@@ -1,0 +1,32 @@
+<%= form_with(model: mechanical_property, local: true) do |form| %>
+  <% if mechanical_property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mechanical_property.errors.count, "error") %> prohibited this mechanical_property from being saved:</h2>
+
+      <ul>
+      <% mechanical_property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :silk_sample_id %>
+    <%= form.text_field :silk_sample_id, id: :mechanical_property_silk_sample_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :toughness %>
+    <%= form.text_field :toughness, id: :mechanical_property_toughness %>
+  </div>
+
+  <div class="field">
+    <%= form.label :toughness_sd %>
+    <%= form.text_field :toughness_sd, id: :mechanical_property_toughness_sd %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

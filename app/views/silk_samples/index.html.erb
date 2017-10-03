@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Silk Samples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indivisual</th>
+      <th>Silk type</th>
+      <th>Paper</th>
+      <th>Institution</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @silk_samples.each do |silk_sample| %>
+      <tr>
+        <td><%= silk_sample.indivisual %></td>
+        <td><%= silk_sample.silk_type %></td>
+        <td><%= silk_sample.paper %></td>
+        <td><%= silk_sample.institution %></td>
+        <td><%= link_to 'Show', silk_sample %></td>
+        <td><%= link_to 'Edit', edit_silk_sample_path(silk_sample) %></td>
+        <td><%= link_to 'Destroy', silk_sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Silk Sample', new_silk_sample_path %>

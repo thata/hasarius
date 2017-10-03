@@ -1,0 +1,42 @@
+<%= form_with(model: indivisual, local: true) do |form| %>
+  <% if indivisual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(indivisual.errors.count, "error") %> prohibited this indivisual from being saved:</h2>
+
+      <ul>
+      <% indivisual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :organism_id %>
+    <%= form.text_field :organism_id, id: :indivisual_organism_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex, id: :indivisual_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sampling_date %>
+    <%= form.date_select :sampling_date, id: :indivisual_sampling_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country, id: :indivisual_country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.number_field :size, id: :indivisual_size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

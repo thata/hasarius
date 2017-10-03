@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Specimen Samples</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indivisual</th>
+      <th>Specimen type</th>
+      <th>Paper</th>
+      <th>Institution</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @specimen_samples.each do |specimen_sample| %>
+      <tr>
+        <td><%= specimen_sample.indivisual %></td>
+        <td><%= specimen_sample.specimen_type %></td>
+        <td><%= specimen_sample.paper %></td>
+        <td><%= specimen_sample.institution %></td>
+        <td><%= link_to 'Show', specimen_sample %></td>
+        <td><%= link_to 'Edit', edit_specimen_sample_path(specimen_sample) %></td>
+        <td><%= link_to 'Destroy', specimen_sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Specimen Sample', new_specimen_sample_path %>

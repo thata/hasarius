@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  species: MyString
+  tax_id: 1
+  type_of_web: MyString
+
+two:
+  species: MyString
+  tax_id: 1
+  type_of_web: MyString

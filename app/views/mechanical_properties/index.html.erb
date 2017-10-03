@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mechanical Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Silk sample</th>
+      <th>Toughness</th>
+      <th>Toughness sd</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mechanical_properties.each do |mechanical_property| %>
+      <tr>
+        <td><%= mechanical_property.silk_sample %></td>
+        <td><%= mechanical_property.toughness %></td>
+        <td><%= mechanical_property.toughness_sd %></td>
+        <td><%= link_to 'Show', mechanical_property %></td>
+        <td><%= link_to 'Edit', edit_mechanical_property_path(mechanical_property) %></td>
+        <td><%= link_to 'Destroy', mechanical_property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mechanical Property', new_mechanical_property_path %>

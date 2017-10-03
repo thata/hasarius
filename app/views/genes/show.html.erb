@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Specimen sample:</strong>
+  <%= @gene.specimen_sample %>
+</p>
+
+<p>
+  <strong>Gene name:</strong>
+  <%= @gene.gene_name %>
+</p>
+
+<p>
+  <strong>Dna sequence:</strong>
+  <%= @gene.dna_sequence %>
+</p>
+
+<p>
+  <strong>Protein name:</strong>
+  <%= @gene.protein_name %>
+</p>
+
+<p>
+  <strong>Amino acid sequence:</strong>
+  <%= @gene.amino_acid_sequence %>
+</p>
+
+<%= link_to 'Edit', edit_gene_path(@gene) %> |
+<%= link_to 'Back', genes_path %>

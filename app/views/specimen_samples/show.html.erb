@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Indivisual:</strong>
+  <%= @specimen_sample.indivisual %>
+</p>
+
+<p>
+  <strong>Specimen type:</strong>
+  <%= @specimen_sample.specimen_type %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @specimen_sample.paper %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @specimen_sample.institution %>
+</p>
+
+<%= link_to 'Edit', edit_specimen_sample_path(@specimen_sample) %> |
+<%= link_to 'Back', specimen_samples_path %>

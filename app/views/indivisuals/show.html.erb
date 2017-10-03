@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organism:</strong>
+  <%= @indivisual.organism %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @indivisual.sex %>
+</p>
+
+<p>
+  <strong>Sampling date:</strong>
+  <%= @indivisual.sampling_date %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @indivisual.country %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @indivisual.size %>
+</p>
+
+<%= link_to 'Edit', edit_indivisual_path(@indivisual) %> |
+<%= link_to 'Back', indivisuals_path %>

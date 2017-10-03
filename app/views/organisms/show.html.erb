@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @organism.species %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @organism.tax_id %>
+</p>
+
+<p>
+  <strong>Type of web:</strong>
+  <%= @organism.type_of_web %>
+</p>
+
+<%= link_to 'Edit', edit_organism_path(@organism) %> |
+<%= link_to 'Back', organisms_path %>

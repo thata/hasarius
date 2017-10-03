@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Indivisual:</strong>
+  <%= @silk_sample.indivisual %>
+</p>
+
+<p>
+  <strong>Silk type:</strong>
+  <%= @silk_sample.silk_type %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @silk_sample.paper %>
+</p>
+
+<p>
+  <strong>Institution:</strong>
+  <%= @silk_sample.institution %>
+</p>
+
+<%= link_to 'Edit', edit_silk_sample_path(@silk_sample) %> |
+<%= link_to 'Back', silk_samples_path %>

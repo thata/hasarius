@@ -1,0 +1,37 @@
+<%= form_with(model: silk_sample, local: true) do |form| %>
+  <% if silk_sample.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(silk_sample.errors.count, "error") %> prohibited this silk_sample from being saved:</h2>
+
+      <ul>
+      <% silk_sample.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :indivisual_id %>
+    <%= form.text_field :indivisual_id, id: :silk_sample_indivisual_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :silk_type %>
+    <%= form.text_field :silk_type, id: :silk_sample_silk_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paper %>
+    <%= form.text_field :paper, id: :silk_sample_paper %>
+  </div>
+
+  <div class="field">
+    <%= form.label :institution %>
+    <%= form.text_field :institution, id: :silk_sample_institution %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

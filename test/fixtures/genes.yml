@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  specimen_sample: one
+  gene_name: MyString
+  dna_sequence: MyText
+  protein_name: MyString
+  amino_acid_sequence: MyText
+
+two:
+  specimen_sample: two
+  gene_name: MyString
+  dna_sequence: MyText
+  protein_name: MyString
+  amino_acid_sequence: MyText

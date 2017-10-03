@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Silk sample:</strong>
+  <%= @mechanical_property.silk_sample %>
+</p>
+
+<p>
+  <strong>Toughness:</strong>
+  <%= @mechanical_property.toughness %>
+</p>
+
+<p>
+  <strong>Toughness sd:</strong>
+  <%= @mechanical_property.toughness_sd %>
+</p>
+
+<%= link_to 'Edit', edit_mechanical_property_path(@mechanical_property) %> |
+<%= link_to 'Back', mechanical_properties_path %>
