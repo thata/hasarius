@@ -4,7 +4,7 @@
   <div><%= text_field_tag("conditions[]", @conditions[0] || '') %></div>
   <div><%= text_field_tag("conditions[]", @conditions[1] || '') %></div>
   <div><%= text_field_tag("conditions[]", @conditions[2] || '') %></div>
-  <%= submit_tag(:submit) %>
+  <%= submit_tag(:search) %>
 <% end %>
 
 <h2>Organisms</h2>
@@ -22,4 +22,49 @@
     </tr>
   <% end %>
 </table>
-<p>Find me in app/views/advanced_search/index.html.erb</p>
+
+<h2>Indivisuals</h2>
+<table>
+  <tr>
+    <th>Sex</th>
+    <th>Sampling date</th>
+    <th>Country</th>
+    <th>Size</th>
+  </tr>
+  <% @indivisuals.each do |idv| %>
+    <tr>
+      <td><%= idv.sex %></td>
+      <td><%= idv.sampling_date %></td>
+      <td><%= idv.country %></td>
+      <td><%= idv.size %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Genes</h2>
+<table>
+  <tr>
+    <th>Gene name</th>
+    <th>Protein name</th>
+  </tr>
+  <% @genes.each do |gene| %>
+    <tr>
+      <td><%= gene.gene_name %></td>
+      <td><%= gene.protein_name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Mechanical property</h2>
+<table>
+  <tr>
+    <th>Toughness</th>
+    <th>Toughness SD</th>
+  </tr>
+  <% @mps.each do |mp| %>
+    <tr>
+      <td><%= mp.toughness %></td>
+      <td><%= mp.toughness_sd %></td>
+    </tr>
+  <% end %>
+</table>

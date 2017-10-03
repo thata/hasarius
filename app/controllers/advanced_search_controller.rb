@@ -7,5 +7,8 @@ class AdvancedSearchController < ApplicationController
       end
     end
     @orgs = Organism.advanced_search(params[:conditions])
+    @indivisuals = Indivisual.advanced_search(params[:conditions])
+    @genes = Gene.advanced_search(params[:conditions])
+    @mps = MechanicalProperty.advanced_search(params[:conditions])
   end
 end
