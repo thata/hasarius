@@ -10,6 +10,9 @@ class OrganismsController < ApplicationController
   # GET /organisms/1
   # GET /organisms/1.json
   def show
+    @indivisuals = @organism.indivisuals
+    @genes = @organism.indivisuals.map {|idv| idv.genes }.flatten.sort
+    @mps = @organism.indivisuals.map {|idv| idv.mechanical_properties }.flatten.sort
   end
 
   # GET /organisms/new

@@ -17,3 +17,49 @@
 
 <%= link_to 'Edit', edit_organism_path(@organism) %> |
 <%= link_to 'Back', organisms_path %>
+
+<h2>Indivisuals</h2>
+<table>
+  <tr>
+    <th>Sex</th>
+    <th>Sampling date</th>
+    <th>Country</th>
+    <th>Size</th>
+  </tr>
+  <% @indivisuals.each do |idv| %>
+    <tr>
+      <td><%= idv.sex %></td>
+      <td><%= idv.sampling_date %></td>
+      <td><%= idv.country %></td>
+      <td><%= idv.size %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Genes</h2>
+<table>
+  <tr>
+    <th>Gene name</th>
+    <th>Protein name</th>
+  </tr>
+  <% @genes.each do |gene| %>
+    <tr>
+      <td><%= gene.gene_name %></td>
+      <td><%= gene.protein_name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Mechanical property</h2>
+<table>
+  <tr>
+    <th>Toughness</th>
+    <th>Toughness SD</th>
+  </tr>
+  <% @mps.each do |mp| %>
+    <tr>
+      <td><%= mp.toughness %></td>
+      <td><%= mp.toughness_sd %></td>
+    </tr>
+  <% end %>
+</table>

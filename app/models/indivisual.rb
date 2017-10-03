@@ -2,6 +2,8 @@ class Indivisual < ApplicationRecord
   belongs_to :organism
   has_many :silk_samples
   has_many :specimen_samples
+  has_many :mechanical_properties, through: :silk_samples
+  has_many :genes, through: :specimen_samples
 
   def self.advanced_search(conditions)
     relation = joins(:organism).
