@@ -10,12 +10,14 @@
 <h2>Organisms</h2>
 <table>
   <tr>
+    <th>ID</th>
     <th>Species</th>
     <th>Tax ID</th>
     <th>Type of web</th>
   </tr>
   <% @orgs.each do |org| %>
     <tr>
+      <td><a href="<%= organism_path(org.id) %>"><%= org.id %></a></td>
       <td><%= org.species %></td>
       <td><%= org.tax_id %></td>
       <td><%= org.type_of_web %></td>
